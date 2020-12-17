@@ -29,6 +29,6 @@ public class BrandController {
     @GetMapping
     public Result<List<Brand>> findAll() {
         List<Brand> brandList = brandService.findAll();
-        return new Result<List<Brand>>(true, StatusCode.OK,"查询品牌集合成功！",brandList);
+        return new Result<List<Brand>>(true, StatusCode.OK, "查询品牌集合成功！", brandList);
     }
 }
