@@ -18,6 +18,16 @@ public class BrandServiceImpl implements BrandService {
     private BrandMapper brandMapper;
 
     @Override
+    public void add(Brand brand) {
+        brandMapper.insertSelective(brand);
+    }
+
+    @Override
+    public Brand findById(Integer id) {
+        return brandMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
     public List<Brand> findAll() {
         return brandMapper.selectAll();
     }
