@@ -9,17 +9,29 @@ import java.util.List;
  */
 public interface BrandService {
 
+    /*
+    * 根据ID删除品牌
+    * */
+    void delete(Integer id);
+    /*
+     * 根据ID修改品牌数据
+     * */
+    void update(Brand brand);
+
     /**
      * 增加品牌
+     *
      * @param brand
      */
     void add(Brand brand);
+
     /*
-    * 根据id查询
-    * */
+     * 根据id查询
+     * */
     Brand findById(Integer id);
+
     /*
-    * 查询所有
-    * */
+     * 查询所有
+     * */
     List<Brand> findAll();
 }

@@ -18,6 +18,16 @@ public class BrandServiceImpl implements BrandService {
     private BrandMapper brandMapper;
 
     @Override
+    public void delete(Integer id) {
+        brandMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public void update(Brand brand) {
+        brandMapper.updateByPrimaryKeySelective(brand);
+    }
+
+    @Override
     public void add(Brand brand) {
         brandMapper.insertSelective(brand);
     }
