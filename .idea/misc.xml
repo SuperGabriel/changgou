@@ -5,6 +5,9 @@
       <list>
         <option value="$PROJECT_DIR$/changgou-parent/pom.xml" />
         <option value="$PROJECT_DIR$/changgou-parent/changgou-service/changgou-service-file/pom.xml" />
+        <option value="$PROJECT_DIR$/code-template/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-parent/changgou_common_fescar/pom.xml" />
+        <option value="$PROJECT_DIR$/changgou-parent/changgou-user-oauth/pom.xml" />
       </list>
     </option>
   </component>
