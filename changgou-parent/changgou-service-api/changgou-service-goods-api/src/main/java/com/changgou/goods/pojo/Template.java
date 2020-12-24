@@ -7,6 +7,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
+/**
+ * @author Gabriel
+ */
 @ApiModel(description = "Template",value = "Template")
 @Table(name="tb_template")
 public class Template implements Serializable{
