@@ -5,9 +5,9 @@ spring:
     gateway:
       globalcors:
         cors-configurations:
-          '[/**]': # 匹配所有请求
-            allowedOrigins: "*" #跨域处理 允许所有的域
-            allowedMethods: # 支持的方法
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
               - GET
               - POST
               - PUT
@@ -19,11 +19,11 @@ spring:
             - Path=/goods/**
           filters:
             - StripPrefix= 1
-            - name: RequestRateLimiter #请求数限流 名字不能随便写
+            - name: RequestRateLimiter
               args:
                 key-resolver: "#{@ipKeyResolver}"
-                redis-rate-limiter.replenishRate: 1 #令牌桶每秒填充平均速率
-                redis-rate-limiter.burstCapacity: 1 #令牌桶总容量
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
         - id: system
           uri: lb://system
           predicates:
@@ -31,7 +31,8 @@ spring:
           filters:
             - StripPrefix= 1
   redis:
-    host: 192.168.200.128
+    host: 121.4.79.99
+    password: 123456
 server:
   port: 9101
 eureka:
